@@ -31,7 +31,7 @@ for img in sharp_imgs:
 # blurry_laplaces = [ (variance(edge_laplace_blurry_1), np.amax(edge_laplace_blurry_1)), ... ]
 
 # set class labels (non-blurry / blurry) and prepare features
-y = np.concatenate((np.ones((25, )), np.zeros((25, ))), axis=0)
+y = np.concatenate((np.ones((len(sharp_laplaces), )), np.zeros((len(blurry_laplaces), ))), axis=0)
 laplaces = np.concatenate((np.array(sharp_laplaces), np.array(blurry_laplaces)), axis=0)
 
 # scale features
